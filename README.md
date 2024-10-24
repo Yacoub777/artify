@@ -112,7 +112,6 @@ Here are some key API endpoints you can interact with:
 
 ## Screenshots
 Open projectoverview folder
-![Admin Panel Screenshot](./Artifyoverview/Screenshot 2024-10-24 225018.png)
 
 ## Future Improvements
 
