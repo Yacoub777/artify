@@ -1,4 +1,4 @@
-import { Schema, model, models } from "mongoose"
+import { Schema, model, models } from "mongoose";
 
 const UserSchema = new Schema({
   username: {
@@ -16,7 +16,9 @@ const UserSchema = new Schema({
   },
   profileImagePath: {
     type: String,
-    required: [true, "Profile image is required"],
+    default:
+      "C:/Users/MOSTAFA YACOUB/Downloads/artify-master/artify-master/Screenshot/Client.png",
+    required: false, //make it optional
   },
   wishlist: {
     type: Array,
@@ -33,9 +35,9 @@ const UserSchema = new Schema({
   works: {
     type: Array,
     default: [],
-  }
-})
+  },
+});
 
-const User = models.User || model("User", UserSchema)
+const User = models.User || model("User", UserSchema);
 
-export default User
+export default User;

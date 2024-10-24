@@ -9,7 +9,7 @@ import {
 } from "@mui/icons-material";
 import { useSession } from "next-auth/react";
 import Loader from "@components/Loader";
-import "styles/Cart.scss";
+import "@styles/Cart.scss";
 import getStripe from "@lib/getStripe";
 import toast from "react-hot-toast";
 

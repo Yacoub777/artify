@@ -12,19 +12,35 @@ export const PATCH = async (req, { params }) => {
     const user = await User.findById(userId);
     const work = await Work.findById(workId).populate("creator");
 
-    const favoriteWork = user.wishlist.find((item) => item._id.toString() === workId)
+    const favoriteWork = user.wishlist.find(
+      (item) => item._id.toString() === workId
+    );
 
     if (favoriteWork) {
-      user.wishlist = user.wishlist.filter((item) => item._id.toString() !== workId);
-      await user.save()
-      return new Response(JSON.stringify({ message: "Work removed from wishlist", wishlist: user.wishlist }), { status: 200 });
+      user.wishlist = user.wishlist.filter(
+        (item) => item._id.toString() !== workId
+      );
+      await user.save();
+      return new Response(
+        JSON.stringify({
+          message: "Work removed from wishlist",
+          wishlist: user.wishlist,
+        }),
+        { status: 200 }
+      );
     } else {
       user.wishlist.push(work);
-      await user.save()
-      return new Response(JSON.stringify({ message: "Work added to wishlist", wishlist: user.wishlist }), { status: 200 });
+      await user.save();
+      return new Response(
+        JSON.stringify({
+          message: "Work added to wishlist",
+          wishlist: user.wishlist,
+        }),
+        { status: 200 }
+      );
     }
   } catch (err) {
-    console.log(err)
-    return new Response("Failed to patch work to wishlist", { status: 500 })
+    console.log(err);
+    return new Response("Failed to patch work to wishlist", { status: 500 });
   }
-}
+};

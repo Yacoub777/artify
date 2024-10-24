@@ -57,36 +57,36 @@ export const PATCH = async (req, { params }) => {
     }
 
     /* Find the existing Work */
-    const existingWork = await Work.findById(params.id)
+    const existingWork = await Work.findById(params.id);
 
     if (!existingWork) {
       return new Response("The Work Not Found", { status: 404 });
     }
 
     /* Update the Work with the new data */
-    existingWork.category = category
-    existingWork.title = title
-    existingWork.description = description
-    existingWork.price = price
-    existingWork.workPhotoPaths = workPhotoPaths
+    existingWork.category = category;
+    existingWork.title = title;
+    existingWork.description = description;
+    existingWork.price = price;
+    existingWork.workPhotoPaths = workPhotoPaths;
 
-    await existingWork.save()
+    await existingWork.save();
 
-    return new Response("Successfully updated the Work", { status: 200 })
+    return new Response("Successfully updated the Work", { status: 200 });
   } catch (err) {
-    console.log(err)
-    return new Response("Error updating the Work", { status: 500 })
+    console.log(err);
+    return new Response("Error updating the Work", { status: 500 });
   }
 };
 
 export const DELETE = async (req, { params }) => {
   try {
-    await connectToDB()
-    await Work.findByIdAndDelete(params.id)
-  
-    return new Response("Successfully deleted the Work", { status: 200 })
+    await connectToDB();
+    await Work.findByIdAndDelete(params.id);
+
+    return new Response("Successfully deleted the Work", { status: 200 });
   } catch (err) {
-    console.log(err)
-    return new Response("Error deleting the Work", { status: 500 })
+    console.log(err);
+    return new Response("Error deleting the Work", { status: 500 });
   }
-}
+};

@@ -5,7 +5,7 @@ import Navbar from '@components/Navbar'
 import WorkList from '@components/WorkList'
 import { useParams } from 'next/navigation'
 import React, { useState, useEffect } from 'react'
-import "styles/Search.scss"
+import "@styles/Search.scss"
 
 const SearchPage = () => {
   const { query } = useParams()

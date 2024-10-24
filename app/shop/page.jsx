@@ -5,8 +5,8 @@ import Navbar from "@components/Navbar";
 import WorkList from "@components/WorkList";
 import { useSession } from "next-auth/react";
 import { useSearchParams } from "next/navigation";
-import React, { useEffect, useState } from "react";
-import "@styles/Shop.scss"
+import React, { useEffect, useState, Suspense } from "react";
+import "@styles/Shop.scss";
 
 const Shop = () => {
   const [loading, setLoading] = useState(true);
@@ -42,18 +42,21 @@ const Shop = () => {
   return loading ? <Loader /> : (
     <>
       <Navbar />
-
-      {loggedInUserId === profileId && (
+      {loggedInUserId === profileId ? (
         <h1 className="title-list">Your Works</h1>
-      )}
-
-      {loggedInUserId !== profileId && (
+      ) : (
         <h1 className="title-list">{profile.username}'s Works</h1>
       )}
-
-      <WorkList data={workList}/>
+      <WorkList data={workList} />
     </>
   );
 };
 
-export default Shop;
+// Wrap the Shop component in a Suspense boundary
+const ShopPage = () => (
+  <Suspense fallback={<Loader />}>
+    <Shop />
+  </Suspense>
+);
+
+export default ShopPage;

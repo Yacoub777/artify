@@ -69,7 +69,13 @@ const Register = () => {
         className="register_decor"
       />
       <div className="register_content">
-        <form className="register_content_form" onSubmit={handleSubmit}>
+        <form
+          action="/api/register"
+          encType="multipart/form-data"
+          method="POST"
+          className="register_content_form"
+          onSubmit={handleSubmit}
+        >
           <input
             placeholder="Username"
             name="username"
@@ -128,12 +134,8 @@ const Register = () => {
             Register
           </button>
         </form>
-        <button
-          type="button"
-          onClick={loginWithGoogle}
-          className="google"
-        >
-          <p>Log In with Google</p>
+        <button type="button" onClick={loginWithGoogle} className="google">
+          <p>Sign In with Google</p>
           <FcGoogle />
         </button>
         <a href="/login">Already have an account? Log In Here</a>
