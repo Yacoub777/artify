@@ -1,6 +1,4 @@
-Here’s the filled-out `README.md` for your project "Artify." I've marked the parts where additional details are needed with placeholders or notes:
 
-````markdown
 # Artify
 
 ## Description
@@ -18,7 +16,6 @@ Artify is a full-stack web application designed for users to explore, showcase, 
 - [Screenshots](#screenshots)
 - [Future Improvements](#future-improvements)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -56,7 +53,7 @@ To get started with the project, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/MostafaYacoub133/artify.git
+   git clone https://github.com/Yacoub/artify.git
    ```
 ````
 
@@ -75,10 +72,9 @@ To get started with the project, follow these steps:
 4. Create a `.env` file in the root directory and add your MongoDB connection string:
 
    ```plaintext
-   MONGODB_URI=your_mongodb_connection_string
+   MONGODB_URI=mongodb+srv://user_01:admin@cluster0.1qiwl5v.mongodb.net/?retryWrites=true&w=majority
    ```
 
-   **Note**: Replace `your_mongodb_connection_string` with your actual MongoDB URI.
 
 ## Usage
 
@@ -115,10 +111,7 @@ Here are some key API endpoints you can interact with:
   - `POST /api/orders`: Create a new order.
 
 ## Screenshots
-
-Include screenshots of your application here for better understanding. Example:
-
-![Admin Dashboard](link_to_screenshot)
+Open projectoverview folder
 
 **Note**: Replace `link_to_screenshot` with the actual URLs to images showcasing your application.
 
@@ -140,22 +133,8 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 4. Push to the branch (`git push origin feature/YourFeature`).
 5. Open a pull request.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ---
 
 **Author**: Mostafa Yacoub  
 **Email**: yacoub133@gmail.com  
 **GitHub**: [Yacoub777](https://github.com/Yacoub777)
-
-```
-
-### Additional Notes:
-- **Screenshots**: Make sure to replace the placeholder with actual images showing your application's interface.
-- **MongoDB Connection String**: Ensure you provide the actual connection string when deploying.
-- **Future Improvements**: Feel free to expand this section based on your roadmap for the project.
-
-Let me know if you need any more adjustments or additional information!
-```
