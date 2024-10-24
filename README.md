@@ -111,7 +111,7 @@ Here are some key API endpoints you can interact with:
   - `POST /api/orders`: Create a new order.
 
 ## Screenshots
-Open projectoverview folder
+Open Artifyoverview folder
 
 ## Future Improvements
 
