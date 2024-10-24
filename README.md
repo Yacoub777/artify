@@ -88,7 +88,7 @@ Open your browser and go to `http://localhost:3000` to view the application.
 
 ### Accessing Admin Dashboard
 
-To access the admin dashboard, navigate to `http://localhost:3000/admin`. You will be able to manage products, orders, and users from this interface.
+To access the admin dashboard, navigate to `http://localhost:3000/admin/dashboard`. You will be able to manage products, orders, and users from this interface.
 
 ## API Endpoints
 
