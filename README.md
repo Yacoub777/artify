@@ -112,8 +112,7 @@ Here are some key API endpoints you can interact with:
 
 ## Screenshots
 Open projectoverview folder
-
-**Note**: Replace `link_to_screenshot` with the actual URLs to images showcasing your application.
+![Admin Panel Screenshot](./projectoverview/Screenshot 2024-10-24 225018.png)
 
 ## Future Improvements
 
