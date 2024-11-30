@@ -142,7 +142,7 @@ Contributions are welcome! To contribute:
 
 **Author**: Mostafa Yacoub  
 - **Email**: [yacoub133@gmail.com](mailto:yacoub133@gmail.com)  
-- **GitHub**: [MostafaYacoub133](https://github.com/MostafaYacoub133)  
+- **GitHub**: [MostafaYacoub133](https://github.com/Yacoub777)  
 ```
 
 You can copy and paste this content into your `README.md` file.
