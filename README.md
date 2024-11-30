@@ -1,138 +1,148 @@
+# Artify  
 
-# Artify
+## Description  
 
-## Description
+Artify is a full-stack web application designed for users to explore, showcase, and purchase artwork. This platform provides a seamless experience for both customers and administrators, featuring functionalities such as user registration, product management, and order tracking. The goal of Artify is to bridge the gap between artists and art enthusiasts by offering a visually engaging and user-friendly platform.  
 
-Artify is a full-stack web application designed for users to explore, showcase, and purchase artwork. This platform provides a seamless user experience for both customers and administrators, enabling functionalities like user registration, product management, and order history. The goal of Artify is to connect artists with art enthusiasts in a visually appealing and user-friendly environment.
+## Table of Contents  
 
-## Table of Contents
+- [Description](#description)  
+- [Features](#features)  
+- [Technologies Used](#technologies-used)  
+- [Installation](#installation)  
+- [Usage](#usage)  
+- [API Endpoints](#api-endpoints)  
+- [Screenshots](#screenshots)  
+- [Future Improvements](#future-improvements)  
+- [Contributing](#contributing)  
 
-- [Description](#description)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Screenshots](#screenshots)
-- [Future Improvements](#future-improvements)
-- [Contributing](#contributing)
+## Features  
 
-## Features
+- **User Registration and Authentication**: Secure account creation and login with JWT-based authentication.  
+- **Browse and Search Artworks**: Explore and filter a diverse range of artworks by categories.  
+- **Admin Product Management**: Create, update, delete, and list products via a dedicated admin dashboard.  
+- **Order History**: Customers can view and track their order statuses.  
+- **Admin Dashboard**: An intuitive interface for managing users, orders, and products efficiently.  
+- **Responsive Design**: Optimized for all screen sizes to provide an excellent user experience on any device.  
 
-- **User Registration and Authentication**: Secure sign-up and login functionalities to manage user accounts.
-- **Browse and Search Artworks**: Users can easily navigate through a wide range of artworks and filter based on categories.
-- **Manage Products**: Admins can create, list, update, and delete products directly from the dashboard.
-- **View Order History**: Customers can check their past orders and their statuses.
-- **Admin Dashboard**: A comprehensive admin interface for managing users, products, and orders efficiently.
-- **Responsive Design**: Mobile-friendly interface that adapts to different screen sizes for a better user experience.
+## Technologies Used  
 
-## Technologies Used
+### Frontend  
 
-- **Frontend**:
+- **Next.js**: React framework for server-side rendering and static site generation.  
+- **React**: A library for building user interfaces.  
+- **CSS Modules**: Scoped and modular CSS for styling.  
 
-  - **Next.js**: A React framework for server-side rendering and static site generation.
-  - **React**: JavaScript library for building user interfaces.
-  - **CSS Modules**: For modular and scoped CSS styling.
+### Backend  
 
-- **Backend**:
+- **Node.js**: JavaScript runtime for server-side development.  
+- **Express.js**: Framework for building APIs and handling server logic.  
 
-  - **Node.js**: JavaScript runtime for building server-side applications.
-  - **Express.js**: Web framework for Node.js to build APIs easily.
+### Database  
 
-- **Database**:
+- **MongoDB**: A NoSQL database hosted on MongoDB Atlas to store user and product data.  
 
-  - **MongoDB**: NoSQL database to store user and product data, hosted on MongoDB Atlas.
+### Others  
 
-- **Others**:
-  - **JWT**: For secure authentication.
-  - **Axios**: For making HTTP requests to the backend.
+- **JWT (JSON Web Tokens)**: For secure authentication and session management.  
+- **Axios**: For seamless HTTP requests between frontend and backend.  
 
-## Installation
+## Installation  
 
-To get started with the project, follow these steps:
+To set up the project locally:  
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Yacoub/artify.git
-   ```
-````
+1. **Clone the repository**:  
+   ```bash  
+   git clone https://github.com/MostafaYacoub133/artify.git  
+   ```  
 
-2. Navigate into the project directory:
+2. **Navigate into the project directory**:  
+   ```bash  
+   cd artify  
+   ```  
 
-   ```bash
-   cd artify
-   ```
+3. **Install dependencies**:  
+   ```bash  
+   npm install  
+   ```  
 
-3. Install the dependencies:
+4. **Set up environment variables**:  
+   Create a `.env` file in the root directory with the following content:  
+   ```plaintext  
+   MONGODB_URI=mongodb+srv://user_01:admin@cluster0.mongodb.net/artify?retryWrites=true&w=majority  
+   JWT_SECRET=your_jwt_secret  
+   ```  
 
-   ```bash
-   npm install
-   ```
+## Usage  
 
-4. Create a `.env` file in the root directory and add your MongoDB connection string:
+To run the project:  
 
-   ```plaintext
-   MONGODB_URI=mongodb+srv://user_01:admin@cluster0.1qiwl5v.mongodb.net/?retryWrites=true&w=majority
-   ```
+1. **Start the development server**:  
+   ```bash  
+   npm run dev  
+   ```  
 
+2. Open your browser and navigate to `http://localhost:3000` to view the application.  
 
-## Usage
+### Accessing the Admin Dashboard  
 
-To run the project locally, use the following command:
+Visit `http://localhost:3000/admin/dashboard` to access admin functionalities, such as managing users, products, and orders.  
 
-```bash
-npm run dev
-```
+## API Endpoints  
 
-Open your browser and go to `http://localhost:3000` to view the application.
+### User Authentication  
 
-### Accessing Admin Dashboard
+- `POST /api/auth/signup`: Register a new user.  
+- `POST /api/auth/login`: Log in an existing user.  
 
-To access the admin dashboard, navigate to `http://localhost:3000/admin/dashboard`. You will be able to manage products, orders, and users from this interface.
+### Product Management  
 
-## API Endpoints
+- `GET /api/products`: Retrieve all products.  
+- `POST /api/products`: Add a new product (admin only).  
+- `PUT /api/products/:id`: Update a product by ID (admin only).  
+- `DELETE /api/products/:id`: Delete a product by ID (admin only).  
 
-Here are some key API endpoints you can interact with:
+### Order Management  
 
-- **User Authentication**:
+- `GET /api/orders`: Get all orders (admin only).  
+- `POST /api/orders`: Place a new order.  
 
-  - `POST /api/auth/signup`: Register a new user.
-  - `POST /api/auth/login`: Log in an existing user.
+## Screenshots  
 
-- **Product Management**:
+Screenshots of the platform can be found in the **`screenshots`** folder of the repository.  
 
-  - `GET /api/products`: Retrieve a list of all products.
-  - `POST /api/products`: Create a new product.
-  - `PUT /api/products/:id`: Update a product by ID.
-  - `DELETE /api/products/:id`: Delete a product by ID.
+## Future Improvements  
 
-- **Order Management**:
-  - `GET /api/orders`: Retrieve a list of all orders.
-  - `POST /api/orders`: Create a new order.
+- Role-based access control for customers and admins.  
+- Pagination for product and order listings.  
+- Integration with payment gateways for seamless transactions.  
+- Real-time notifications for order updates.  
+- Enhanced search and filter capabilities for users.  
 
-## Screenshots
-Open Artifyoverview folder
+## Contributing  
 
-## Future Improvements
+Contributions are welcome! To contribute:  
 
-- Add user roles (e.g., customer, admin) with different permissions.
-- Implement pagination for product listings.
-- Improve UI/UX with more responsive design elements.
-- Integrate payment processing for online transactions.
-- Implement real-time notifications for order status updates.
+1. Fork the repository.  
+2. Create a new branch for your feature or fix:  
+   ```bash  
+   git checkout -b feature/your-feature  
+   ```  
+3. Make your changes and commit them:  
+   ```bash  
+   git commit -m "Add feature: your feature description"  
+   ```  
+4. Push your branch:  
+   ```bash  
+   git push origin feature/your-feature  
+   ```  
+5. Submit a pull request with a clear description of your changes.  
 
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes. You can also open issues for any bugs or feature requests.
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/YourFeature`).
-3. Commit your changes (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Open a pull request.
-
----
+---  
 
 **Author**: Mostafa Yacoub  
-**Email**: yacoub133@gmail.com  
-**GitHub**: [Yacoub777](https://github.com/Yacoub777)
+- **Email**: [yacoub133@gmail.com](mailto:yacoub133@gmail.com)  
+- **GitHub**: [MostafaYacoub133](https://github.com/MostafaYacoub133)  
+```
+
+You can copy and paste this content into your `README.md` file.
